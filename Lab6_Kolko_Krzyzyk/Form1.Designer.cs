@@ -40,22 +40,34 @@
             this.label1 = new System.Windows.Forms.Label();
             this.KtoWygral = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.rematchBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.settingsPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // Pole0
             // 
+            this.Pole0.BackColor = System.Drawing.Color.BlueViolet;
+            this.Pole0.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Pole0.FlatAppearance.BorderSize = 2;
+            this.Pole0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pole0.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Pole0.Location = new System.Drawing.Point(12, 12);
+            this.Pole0.Location = new System.Drawing.Point(84, 82);
+            this.Pole0.Margin = new System.Windows.Forms.Padding(0);
             this.Pole0.Name = "Pole0";
             this.Pole0.Size = new System.Drawing.Size(100, 100);
             this.Pole0.TabIndex = 0;
-            this.Pole0.UseVisualStyleBackColor = true;
+            this.Pole0.UseVisualStyleBackColor = false;
             this.Pole0.Click += new System.EventHandler(this.Pole0_Click);
             // 
             // Pole1
             // 
+            this.Pole1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Pole1.FlatAppearance.BorderSize = 2;
+            this.Pole1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pole1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Pole1.Location = new System.Drawing.Point(118, 12);
+            this.Pole1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Pole1.Location = new System.Drawing.Point(190, 82);
             this.Pole1.Name = "Pole1";
             this.Pole1.Size = new System.Drawing.Size(100, 100);
             this.Pole1.TabIndex = 1;
@@ -64,18 +76,24 @@
             // 
             // Pole2
             // 
+            this.Pole2.BackColor = System.Drawing.Color.BlueViolet;
+            this.Pole2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Pole2.FlatAppearance.BorderSize = 2;
+            this.Pole2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pole2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Pole2.Location = new System.Drawing.Point(224, 12);
+            this.Pole2.Location = new System.Drawing.Point(296, 82);
             this.Pole2.Name = "Pole2";
             this.Pole2.Size = new System.Drawing.Size(100, 100);
             this.Pole2.TabIndex = 2;
-            this.Pole2.UseVisualStyleBackColor = true;
+            this.Pole2.UseVisualStyleBackColor = false;
             this.Pole2.Click += new System.EventHandler(this.Pole2_Click);
             // 
             // Pole3
             // 
+            this.Pole3.FlatAppearance.BorderSize = 2;
+            this.Pole3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pole3.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Pole3.Location = new System.Drawing.Point(12, 118);
+            this.Pole3.Location = new System.Drawing.Point(84, 188);
             this.Pole3.Name = "Pole3";
             this.Pole3.Size = new System.Drawing.Size(100, 100);
             this.Pole3.TabIndex = 3;
@@ -84,8 +102,10 @@
             // 
             // Pole4
             // 
+            this.Pole4.FlatAppearance.BorderSize = 2;
+            this.Pole4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pole4.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Pole4.Location = new System.Drawing.Point(118, 118);
+            this.Pole4.Location = new System.Drawing.Point(190, 188);
             this.Pole4.Name = "Pole4";
             this.Pole4.Size = new System.Drawing.Size(100, 100);
             this.Pole4.TabIndex = 4;
@@ -94,8 +114,10 @@
             // 
             // Pole5
             // 
+            this.Pole5.FlatAppearance.BorderSize = 2;
+            this.Pole5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pole5.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Pole5.Location = new System.Drawing.Point(224, 118);
+            this.Pole5.Location = new System.Drawing.Point(296, 188);
             this.Pole5.Name = "Pole5";
             this.Pole5.Size = new System.Drawing.Size(100, 100);
             this.Pole5.TabIndex = 5;
@@ -104,8 +126,10 @@
             // 
             // Pole6
             // 
+            this.Pole6.FlatAppearance.BorderSize = 2;
+            this.Pole6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pole6.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Pole6.Location = new System.Drawing.Point(12, 224);
+            this.Pole6.Location = new System.Drawing.Point(84, 294);
             this.Pole6.Name = "Pole6";
             this.Pole6.Size = new System.Drawing.Size(100, 100);
             this.Pole6.TabIndex = 6;
@@ -114,8 +138,10 @@
             // 
             // Pole7
             // 
+            this.Pole7.FlatAppearance.BorderSize = 2;
+            this.Pole7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pole7.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Pole7.Location = new System.Drawing.Point(118, 224);
+            this.Pole7.Location = new System.Drawing.Point(190, 294);
             this.Pole7.Name = "Pole7";
             this.Pole7.Size = new System.Drawing.Size(100, 100);
             this.Pole7.TabIndex = 7;
@@ -124,8 +150,10 @@
             // 
             // Pole8
             // 
+            this.Pole8.FlatAppearance.BorderSize = 2;
+            this.Pole8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pole8.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Pole8.Location = new System.Drawing.Point(224, 224);
+            this.Pole8.Location = new System.Drawing.Point(296, 294);
             this.Pole8.Name = "Pole8";
             this.Pole8.Size = new System.Drawing.Size(100, 100);
             this.Pole8.TabIndex = 8;
@@ -135,12 +163,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(522, 38);
+            this.label1.Font = new System.Drawing.Font("Snap ITC", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(106, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(237, 37);
+            this.label1.Size = new System.Drawing.Size(276, 42);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Kółko i Krzyżk";
+            this.label1.Text = "TIC TAC TOE";
             // 
             // KtoWygral
             // 
@@ -154,19 +182,61 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(403, 118);
+            this.label2.Font = new System.Drawing.Font("Snap ITC", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(106, 418);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(265, 37);
+            this.label2.Size = new System.Drawing.Size(165, 42);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Wynik Końcowy:";
+            this.label2.Text = "Winner:";
+            // 
+            // rematchBtn
+            // 
+            this.rematchBtn.BackColor = System.Drawing.Color.BlueViolet;
+            this.rematchBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.rematchBtn.FlatAppearance.BorderSize = 2;
+            this.rematchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rematchBtn.Font = new System.Drawing.Font("Snap ITC", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rematchBtn.Location = new System.Drawing.Point(27, 474);
+            this.rematchBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.rematchBtn.Name = "rematchBtn";
+            this.rematchBtn.Size = new System.Drawing.Size(195, 54);
+            this.rematchBtn.TabIndex = 12;
+            this.rematchBtn.Text = "Rematch";
+            this.rematchBtn.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.BlueViolet;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Snap ITC", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(240, 474);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(213, 54);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Settings";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // settingsPanel
+            // 
+            this.settingsPanel.BackColor = System.Drawing.Color.BlueViolet;
+            this.settingsPanel.Location = new System.Drawing.Point(0, 1);
+            this.settingsPanel.Name = "settingsPanel";
+            this.settingsPanel.Size = new System.Drawing.Size(500, 600);
+            this.settingsPanel.TabIndex = 14;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(934, 361);
+            this.BackColor = System.Drawing.Color.BlueViolet;
+            this.ClientSize = new System.Drawing.Size(484, 561);
+            this.Controls.Add(this.settingsPanel);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.rematchBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.KtoWygral);
             this.Controls.Add(this.label1);
@@ -201,6 +271,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label KtoWygral;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button rematchBtn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel settingsPanel;
     }
 }
 

@@ -15,105 +15,102 @@ namespace Lab6_Kolko_Krzyzyk
         public Form1()
         {
             InitializeComponent();
-
+            settingsPanel.Visible= false;
         }
 
-        int kolejka = 0; // 0 = kolko 1 = krzyzk
+        int turn = 0; // 0 = kolko 1 = krzyzk
         string znak; // 
         int ruch = 0;
-
+        List<Button> fields = new List<Button>();
 
         private void Pole0_Click(object sender, EventArgs e)
         {
-
-            zmianaRuchu();
+            ChangeTurn();
             Pole0.Text = znak;
             Pole0.Enabled = false;
-            sprawdzWygrana();
+            CheckWin();
         }
 
         private void Pole1_Click(object sender, EventArgs e)
         {
-            zmianaRuchu();
+            ChangeTurn();
             Pole1.Text = znak;
             Pole1.Enabled = false;
-            sprawdzWygrana();
+            CheckWin();
         }
 
         private void Pole2_Click(object sender, EventArgs e)
         {
-            zmianaRuchu();
+            ChangeTurn();
             Pole2.Text = znak;
             Pole2.Enabled = false;
-            sprawdzWygrana();
+            CheckWin();
         }
 
         private void Pole3_Click(object sender, EventArgs e)
         {
-            zmianaRuchu();
+            ChangeTurn();
             Pole3.Text = znak;
             Pole3.Enabled = false;
-            sprawdzWygrana();
+            CheckWin();
         }
 
         private void Pole4_Click(object sender, EventArgs e)
         {
-            zmianaRuchu();
+            ChangeTurn();
             Pole4.Text = znak;
             Pole4.Enabled = false;
-            sprawdzWygrana();
+            CheckWin();
         }
 
         private void Pole5_Click(object sender, EventArgs e)
         {
-            zmianaRuchu();
+            ChangeTurn();
             Pole5.Text = znak;
             Pole5.Enabled = false;
-            sprawdzWygrana();
+            CheckWin();
         }
 
         private void Pole6_Click(object sender, EventArgs e)
         {
-            zmianaRuchu();
+            ChangeTurn();
             Pole6.Text = znak;
             Pole6.Enabled = false;
-            sprawdzWygrana();
+            CheckWin();
         }
         private void Pole7_Click(object sender, EventArgs e)
         {
-            zmianaRuchu();
+            ChangeTurn();
             Pole7.Text = znak;
             Pole7.Enabled = false;
-            sprawdzWygrana();
+            CheckWin();
         }
 
         private void Pole8_Click(object sender, EventArgs e)
         {
-            zmianaRuchu();
+            ChangeTurn();
             Pole8.Text = znak;
             Pole8.Enabled = false;
-            sprawdzWygrana();
+            CheckWin();
         }
 
-        private void zmianaRuchu()
-        {
-            
-            if (kolejka == 0)
+        private void ChangeTurn()
+        {      
+            if (turn == 0)
             {
                 znak = "O";
-                kolejka++;
+                turn++;
             }
             else
             {
                 znak = "X";
-                kolejka--;
+                turn--;
             }
             ruch++;
         }
 
-        private void sprawdzWygrana()
+        private void CheckWin()
         {
-
             if (
                Pole0.Text == "O" && Pole1.Text == "O" && Pole2.Text == "O"
                || Pole3.Text == "O" && Pole4.Text == "O" && Pole5.Text == "O"
@@ -170,17 +167,14 @@ namespace Lab6_Kolko_Krzyzyk
                 {
                     return;
                 }
-
-                
             }
-
         }
 
         private void restart()
         {
             KtoWygral.Text = "";
             ruch = 0;
-            kolejka = 0;
+            turn = 0;
             znak = "";
             Pole0.Enabled = true;
             Pole1.Enabled = true;
@@ -200,6 +194,11 @@ namespace Lab6_Kolko_Krzyzyk
             Pole6.Text = znak;
             Pole7.Text = znak;
             Pole8.Text = znak;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            settingsPanel.Visible= true;
         }
     }
 }
