@@ -15,82 +15,65 @@ namespace Lab6_Kolko_Krzyzyk
         public Form1()
         {
             InitializeComponent();
-            settingsPanel.Visible= false;
+            settingsPanel.Visible = false;
+            Fields.Add(Pole0); Fields.Add(Pole1); Fields.Add(Pole2); Fields.Add(Pole3); Fields.Add(Pole4);
+            Fields.Add(Pole5); Fields.Add(Pole6); Fields.Add(Pole7); Fields.Add(Pole8);
         }
 
         int turn = 0; // 0 = kolko 1 = krzyzk
-        string znak; // 
+        string znak;
         int ruch = 0;
-        List<Button> fields = new List<Button>();
+        List<Button> Fields = new List<Button>();
 
         private void Pole0_Click(object sender, EventArgs e)
         {
-            ChangeTurn();
-            Pole0.Text = znak;
-            Pole0.Enabled = false;
-            CheckWin();
+            Click(Pole0);
         }
 
         private void Pole1_Click(object sender, EventArgs e)
         {
-            ChangeTurn();
-            Pole1.Text = znak;
-            Pole1.Enabled = false;
-            CheckWin();
+            Click(Pole1);
         }
 
         private void Pole2_Click(object sender, EventArgs e)
         {
-            ChangeTurn();
-            Pole2.Text = znak;
-            Pole2.Enabled = false;
-            CheckWin();
+            Click(Pole2);
         }
 
         private void Pole3_Click(object sender, EventArgs e)
         {
-            ChangeTurn();
-            Pole3.Text = znak;
-            Pole3.Enabled = false;
-            CheckWin();
+            Click(Pole3);
         }
 
         private void Pole4_Click(object sender, EventArgs e)
         {
-            ChangeTurn();
-            Pole4.Text = znak;
-            Pole4.Enabled = false;
-            CheckWin();
+            Click(Pole4);
         }
 
         private void Pole5_Click(object sender, EventArgs e)
         {
-            ChangeTurn();
-            Pole5.Text = znak;
-            Pole5.Enabled = false;
-            CheckWin();
+            Click(Pole5);
         }
 
         private void Pole6_Click(object sender, EventArgs e)
         {
-            ChangeTurn();
-            Pole6.Text = znak;
-            Pole6.Enabled = false;
-            CheckWin();
+            Click(Pole6);
         }
         private void Pole7_Click(object sender, EventArgs e)
         {
-            ChangeTurn();
-            Pole7.Text = znak;
-            Pole7.Enabled = false;
-            CheckWin();
+            Click(Pole7);
         }
 
         private void Pole8_Click(object sender, EventArgs e)
         {
+            Click(Pole8);
+        }
+
+        private void Click(Button Field)
+        {
             ChangeTurn();
-            Pole8.Text = znak;
-            Pole8.Enabled = false;
+            Field.Text = znak;
+            Field.Enabled = false;
             CheckWin();
         }
 
@@ -121,17 +104,8 @@ namespace Lab6_Kolko_Krzyzyk
                || Pole0.Text == "O" && Pole4.Text == "O" && Pole8.Text == "O"
                || Pole2.Text == "O" && Pole4.Text == "O" && Pole6.Text == "O")
             {
-                KtoWygral.Text = "Wygrał Kolko";
-                MessageBox.Show("Koniec Gry", "Informacja",MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DialogResult wynik = MessageBox.Show("Czy chcesz zagrać ponownie?", "Informacja", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (wynik == DialogResult.Yes)
-                {
-                    restart();
-                }
-                else if (wynik == DialogResult.No)
-                {
-                    return;
-                }
+                WhoWon.Text = "Wygrało Kolko";
+                MessageBox.Show("Koniec Gry wygrało kółko", "Informacja",MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (Pole0.Text == "X" && Pole1.Text == "X" && Pole2.Text == "X"
                 || Pole3.Text == "X" && Pole4.Text == "X" && Pole5.Text == "X"
@@ -142,63 +116,42 @@ namespace Lab6_Kolko_Krzyzyk
                 || Pole0.Text == "X" && Pole4.Text == "X" && Pole8.Text == "X"
                 || Pole2.Text == "X" && Pole4.Text == "X" && Pole6.Text == "X")
              {
-                 KtoWygral.Text = "Wygrał krzyzyk";
-                MessageBox.Show("Koniec Gry", "Informacja", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DialogResult wynik = MessageBox.Show("Czy chcesz zagrać ponownie?", "Informacja", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (wynik == DialogResult.Yes)
-                {
-                    restart();
-                }
-                else if (wynik == DialogResult.No)
-                {
-                    return;
-                }
+                WhoWon.Text = "Wygrał krzyzyk";
+                MessageBox.Show("Koniec Gry wygrał krzyżyk", "Informacja", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (ruch == 9)
             {
-                KtoWygral.Text = "Remis";
-                MessageBox.Show("Koniec Gry", "Informacja", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DialogResult wynik= MessageBox.Show("Czy chcesz zagrać ponownie?", "Informacja", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if(wynik == DialogResult.Yes)
-                {
-                    restart();
-                }
-                else if(wynik == DialogResult.No)
-                {
-                    return;
-                }
+                WhoWon.Text = "Remis";
+                MessageBox.Show("Koniec Gry wyik remisowy", "Informacja", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
         }
 
         private void restart()
         {
-            KtoWygral.Text = "";
+            WhoWon.Text = "";
             ruch = 0;
             turn = 0;
             znak = "";
-            Pole0.Enabled = true;
-            Pole1.Enabled = true;
-            Pole2.Enabled = true;
-            Pole3.Enabled = true;
-            Pole4.Enabled = true;
-            Pole5.Enabled = true;
-            Pole6.Enabled = true;
-            Pole7.Enabled = true;
-            Pole8.Enabled = true;
-            Pole0.Text = znak;
-            Pole1.Text = znak;
-            Pole2.Text = znak;
-            Pole3.Text = znak;
-            Pole4.Text = znak;
-            Pole5.Text = znak;
-            Pole6.Text = znak;
-            Pole7.Text = znak;
-            Pole8.Text = znak;
+            foreach(var button in Fields)
+            {
+                button.Enabled = true;
+                button.Text = znak;
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void SettingsBtn_Click(object sender, EventArgs e)
         {
-            settingsPanel.Visible= true;
+            if (settingsPanel.Visible == true)
+            {
+                settingsPanel.Visible = false;
+            }
+            else { settingsPanel.Visible = true; }
+        }
+
+        private void RematchBtn_Click(object sender, EventArgs e)
+        {
+            restart();
         }
     }
 }

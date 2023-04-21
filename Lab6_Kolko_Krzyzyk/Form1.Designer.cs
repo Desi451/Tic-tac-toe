@@ -39,9 +39,9 @@
             this.Pole8 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.KtoWygral = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.rematchBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.WhoWon = new System.Windows.Forms.Label();
+            this.RematchBtn = new System.Windows.Forms.Button();
+            this.SettingsBtn = new System.Windows.Forms.Button();
             this.settingsPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
@@ -179,53 +179,54 @@
             this.KtoWygral.Size = new System.Drawing.Size(0, 37);
             this.KtoWygral.TabIndex = 10;
             // 
-            // label2
+            // WhoWon
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Snap ITC", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(106, 418);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 42);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Winner:";
+            this.WhoWon.AutoSize = true;
+            this.WhoWon.Font = new System.Drawing.Font("Snap ITC", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WhoWon.Location = new System.Drawing.Point(106, 418);
+            this.WhoWon.Name = "WhoWon";
+            this.WhoWon.Size = new System.Drawing.Size(165, 42);
+            this.WhoWon.TabIndex = 11;
+            this.WhoWon.Text = "Winner:";
             // 
-            // rematchBtn
+            // RematchBtn
             // 
-            this.rematchBtn.BackColor = System.Drawing.Color.BlueViolet;
-            this.rematchBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.rematchBtn.FlatAppearance.BorderSize = 2;
-            this.rematchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rematchBtn.Font = new System.Drawing.Font("Snap ITC", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rematchBtn.Location = new System.Drawing.Point(27, 474);
-            this.rematchBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.rematchBtn.Name = "rematchBtn";
-            this.rematchBtn.Size = new System.Drawing.Size(195, 54);
-            this.rematchBtn.TabIndex = 12;
-            this.rematchBtn.Text = "Rematch";
-            this.rematchBtn.UseVisualStyleBackColor = false;
+            this.RematchBtn.BackColor = System.Drawing.Color.BlueViolet;
+            this.RematchBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.RematchBtn.FlatAppearance.BorderSize = 2;
+            this.RematchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RematchBtn.Font = new System.Drawing.Font("Snap ITC", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RematchBtn.Location = new System.Drawing.Point(27, 474);
+            this.RematchBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.RematchBtn.Name = "RematchBtn";
+            this.RematchBtn.Size = new System.Drawing.Size(195, 54);
+            this.RematchBtn.TabIndex = 12;
+            this.RematchBtn.Text = "Rematch";
+            this.RematchBtn.UseVisualStyleBackColor = false;
+            this.RematchBtn.Click += new System.EventHandler(this.RematchBtn_Click);
             // 
-            // button1
+            // SettingsBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.BlueViolet;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Snap ITC", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(240, 474);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(213, 54);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Settings";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.SettingsBtn.BackColor = System.Drawing.Color.BlueViolet;
+            this.SettingsBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SettingsBtn.FlatAppearance.BorderSize = 2;
+            this.SettingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SettingsBtn.Font = new System.Drawing.Font("Snap ITC", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsBtn.Location = new System.Drawing.Point(240, 474);
+            this.SettingsBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.SettingsBtn.Name = "SettingsBtn";
+            this.SettingsBtn.Size = new System.Drawing.Size(213, 54);
+            this.SettingsBtn.TabIndex = 13;
+            this.SettingsBtn.Text = "Settings";
+            this.SettingsBtn.UseVisualStyleBackColor = false;
+            this.SettingsBtn.Click += new System.EventHandler(this.SettingsBtn_Click);
             // 
             // settingsPanel
             // 
-            this.settingsPanel.BackColor = System.Drawing.Color.BlueViolet;
-            this.settingsPanel.Location = new System.Drawing.Point(0, 1);
+            this.settingsPanel.BackColor = System.Drawing.Color.Blue;
+            this.settingsPanel.Location = new System.Drawing.Point(12, 12);
             this.settingsPanel.Name = "settingsPanel";
-            this.settingsPanel.Size = new System.Drawing.Size(500, 600);
+            this.settingsPanel.Size = new System.Drawing.Size(460, 337);
             this.settingsPanel.TabIndex = 14;
             // 
             // Form1
@@ -235,9 +236,9 @@
             this.BackColor = System.Drawing.Color.BlueViolet;
             this.ClientSize = new System.Drawing.Size(484, 561);
             this.Controls.Add(this.settingsPanel);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.rematchBtn);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.SettingsBtn);
+            this.Controls.Add(this.RematchBtn);
+            this.Controls.Add(this.WhoWon);
             this.Controls.Add(this.KtoWygral);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Pole8);
@@ -270,9 +271,9 @@
         private System.Windows.Forms.Button Pole8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label KtoWygral;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button rematchBtn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label WhoWon;
+        private System.Windows.Forms.Button RematchBtn;
+        private System.Windows.Forms.Button SettingsBtn;
         private System.Windows.Forms.Panel settingsPanel;
     }
 }
