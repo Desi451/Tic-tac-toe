@@ -1,6 +1,6 @@
 ﻿namespace Lab6_Kolko_Krzyzyk
 {
-    partial class Form1
+    partial class Game
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -39,10 +39,13 @@
             this.Pole8 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.KtoWygral = new System.Windows.Forms.Label();
-            this.WhoWon = new System.Windows.Forms.Label();
             this.RematchBtn = new System.Windows.Forms.Button();
             this.SettingsBtn = new System.Windows.Forms.Button();
             this.settingsPanel = new System.Windows.Forms.Panel();
+            this.UserCheckBox = new System.Windows.Forms.CheckBox();
+            this.BotCheckBox = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.settingsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Pole0
@@ -52,7 +55,7 @@
             this.Pole0.FlatAppearance.BorderSize = 2;
             this.Pole0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pole0.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Pole0.Location = new System.Drawing.Point(84, 82);
+            this.Pole0.Location = new System.Drawing.Point(84, 68);
             this.Pole0.Margin = new System.Windows.Forms.Padding(0);
             this.Pole0.Name = "Pole0";
             this.Pole0.Size = new System.Drawing.Size(100, 100);
@@ -67,7 +70,7 @@
             this.Pole1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pole1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Pole1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Pole1.Location = new System.Drawing.Point(190, 82);
+            this.Pole1.Location = new System.Drawing.Point(190, 68);
             this.Pole1.Name = "Pole1";
             this.Pole1.Size = new System.Drawing.Size(100, 100);
             this.Pole1.TabIndex = 1;
@@ -81,7 +84,7 @@
             this.Pole2.FlatAppearance.BorderSize = 2;
             this.Pole2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pole2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Pole2.Location = new System.Drawing.Point(296, 82);
+            this.Pole2.Location = new System.Drawing.Point(296, 68);
             this.Pole2.Name = "Pole2";
             this.Pole2.Size = new System.Drawing.Size(100, 100);
             this.Pole2.TabIndex = 2;
@@ -93,7 +96,7 @@
             this.Pole3.FlatAppearance.BorderSize = 2;
             this.Pole3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pole3.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Pole3.Location = new System.Drawing.Point(84, 188);
+            this.Pole3.Location = new System.Drawing.Point(84, 174);
             this.Pole3.Name = "Pole3";
             this.Pole3.Size = new System.Drawing.Size(100, 100);
             this.Pole3.TabIndex = 3;
@@ -105,7 +108,7 @@
             this.Pole4.FlatAppearance.BorderSize = 2;
             this.Pole4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pole4.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Pole4.Location = new System.Drawing.Point(190, 188);
+            this.Pole4.Location = new System.Drawing.Point(190, 174);
             this.Pole4.Name = "Pole4";
             this.Pole4.Size = new System.Drawing.Size(100, 100);
             this.Pole4.TabIndex = 4;
@@ -117,7 +120,7 @@
             this.Pole5.FlatAppearance.BorderSize = 2;
             this.Pole5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pole5.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Pole5.Location = new System.Drawing.Point(296, 188);
+            this.Pole5.Location = new System.Drawing.Point(296, 174);
             this.Pole5.Name = "Pole5";
             this.Pole5.Size = new System.Drawing.Size(100, 100);
             this.Pole5.TabIndex = 5;
@@ -129,7 +132,7 @@
             this.Pole6.FlatAppearance.BorderSize = 2;
             this.Pole6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pole6.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Pole6.Location = new System.Drawing.Point(84, 294);
+            this.Pole6.Location = new System.Drawing.Point(84, 280);
             this.Pole6.Name = "Pole6";
             this.Pole6.Size = new System.Drawing.Size(100, 100);
             this.Pole6.TabIndex = 6;
@@ -141,10 +144,11 @@
             this.Pole7.FlatAppearance.BorderSize = 2;
             this.Pole7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pole7.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Pole7.Location = new System.Drawing.Point(190, 294);
+            this.Pole7.Location = new System.Drawing.Point(190, 280);
             this.Pole7.Name = "Pole7";
             this.Pole7.Size = new System.Drawing.Size(100, 100);
             this.Pole7.TabIndex = 7;
+            this.Pole7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Pole7.UseVisualStyleBackColor = true;
             this.Pole7.Click += new System.EventHandler(this.Pole7_Click);
             // 
@@ -153,7 +157,7 @@
             this.Pole8.FlatAppearance.BorderSize = 2;
             this.Pole8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pole8.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Pole8.Location = new System.Drawing.Point(296, 294);
+            this.Pole8.Location = new System.Drawing.Point(296, 280);
             this.Pole8.Name = "Pole8";
             this.Pole8.Size = new System.Drawing.Size(100, 100);
             this.Pole8.TabIndex = 8;
@@ -164,7 +168,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Snap ITC", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(106, 20);
+            this.label1.Location = new System.Drawing.Point(103, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(276, 42);
             this.label1.TabIndex = 9;
@@ -179,16 +183,6 @@
             this.KtoWygral.Size = new System.Drawing.Size(0, 37);
             this.KtoWygral.TabIndex = 10;
             // 
-            // WhoWon
-            // 
-            this.WhoWon.AutoSize = true;
-            this.WhoWon.Font = new System.Drawing.Font("Snap ITC", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WhoWon.Location = new System.Drawing.Point(106, 418);
-            this.WhoWon.Name = "WhoWon";
-            this.WhoWon.Size = new System.Drawing.Size(165, 42);
-            this.WhoWon.TabIndex = 11;
-            this.WhoWon.Text = "Winner:";
-            // 
             // RematchBtn
             // 
             this.RematchBtn.BackColor = System.Drawing.Color.BlueViolet;
@@ -196,7 +190,7 @@
             this.RematchBtn.FlatAppearance.BorderSize = 2;
             this.RematchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RematchBtn.Font = new System.Drawing.Font("Snap ITC", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RematchBtn.Location = new System.Drawing.Point(27, 474);
+            this.RematchBtn.Location = new System.Drawing.Point(12, 395);
             this.RematchBtn.Margin = new System.Windows.Forms.Padding(0);
             this.RematchBtn.Name = "RematchBtn";
             this.RematchBtn.Size = new System.Drawing.Size(195, 54);
@@ -212,7 +206,7 @@
             this.SettingsBtn.FlatAppearance.BorderSize = 2;
             this.SettingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SettingsBtn.Font = new System.Drawing.Font("Snap ITC", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SettingsBtn.Location = new System.Drawing.Point(240, 474);
+            this.SettingsBtn.Location = new System.Drawing.Point(259, 395);
             this.SettingsBtn.Margin = new System.Windows.Forms.Padding(0);
             this.SettingsBtn.Name = "SettingsBtn";
             this.SettingsBtn.Size = new System.Drawing.Size(213, 54);
@@ -223,22 +217,56 @@
             // 
             // settingsPanel
             // 
-            this.settingsPanel.BackColor = System.Drawing.Color.Blue;
-            this.settingsPanel.Location = new System.Drawing.Point(12, 12);
+            this.settingsPanel.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.settingsPanel.Controls.Add(this.UserCheckBox);
+            this.settingsPanel.Controls.Add(this.BotCheckBox);
+            this.settingsPanel.Controls.Add(this.checkBox1);
+            this.settingsPanel.Location = new System.Drawing.Point(12, 452);
             this.settingsPanel.Name = "settingsPanel";
-            this.settingsPanel.Size = new System.Drawing.Size(460, 337);
+            this.settingsPanel.Size = new System.Drawing.Size(460, 74);
             this.settingsPanel.TabIndex = 14;
             // 
-            // Form1
+            // UserCheckBox
+            // 
+            this.UserCheckBox.AutoSize = true;
+            this.UserCheckBox.Location = new System.Drawing.Point(15, 40);
+            this.UserCheckBox.Name = "UserCheckBox";
+            this.UserCheckBox.Size = new System.Drawing.Size(80, 17);
+            this.UserCheckBox.TabIndex = 2;
+            this.UserCheckBox.Text = "checkBox3";
+            this.UserCheckBox.UseVisualStyleBackColor = true;
+            this.UserCheckBox.CheckedChanged += new System.EventHandler(this.UserCheckBox_CheckedChanged);
+            // 
+            // BotCheckBox
+            // 
+            this.BotCheckBox.AutoSize = true;
+            this.BotCheckBox.Location = new System.Drawing.Point(15, 17);
+            this.BotCheckBox.Name = "BotCheckBox";
+            this.BotCheckBox.Size = new System.Drawing.Size(80, 17);
+            this.BotCheckBox.TabIndex = 1;
+            this.BotCheckBox.Text = "checkBox2";
+            this.BotCheckBox.UseVisualStyleBackColor = true;
+            this.BotCheckBox.CheckedChanged += new System.EventHandler(this.BotCheckBox_CheckedChanged);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(15, 403);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BlueViolet;
-            this.ClientSize = new System.Drawing.Size(484, 561);
+            this.ClientSize = new System.Drawing.Size(484, 538);
             this.Controls.Add(this.settingsPanel);
             this.Controls.Add(this.SettingsBtn);
             this.Controls.Add(this.RematchBtn);
-            this.Controls.Add(this.WhoWon);
             this.Controls.Add(this.KtoWygral);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Pole8);
@@ -250,9 +278,11 @@
             this.Controls.Add(this.Pole2);
             this.Controls.Add(this.Pole1);
             this.Controls.Add(this.Pole0);
-            this.Name = "Form1";
+            this.Name = "Game";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tic Tac Toe";
+            this.settingsPanel.ResumeLayout(false);
+            this.settingsPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,10 +301,12 @@
         private System.Windows.Forms.Button Pole8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label KtoWygral;
-        private System.Windows.Forms.Label WhoWon;
         private System.Windows.Forms.Button RematchBtn;
         private System.Windows.Forms.Button SettingsBtn;
         private System.Windows.Forms.Panel settingsPanel;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox UserCheckBox;
+        private System.Windows.Forms.CheckBox BotCheckBox;
     }
 }
 
