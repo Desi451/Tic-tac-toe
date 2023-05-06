@@ -16,15 +16,16 @@ namespace Lab6_Kolko_Krzyzyk
         {
             InitializeComponent();
             settingsPanel.Visible = false;
-            Fields.Add(Pole0); Fields.Add(Pole1); Fields.Add(Pole2); 
-            Fields.Add(Pole3); Fields.Add(Pole4); Fields.Add(Pole5); 
-            Fields.Add(Pole6); Fields.Add(Pole7); Fields.Add(Pole8);
+            Methods.Fields.Add(Pole0); Methods.Fields.Add(Pole1); Methods.Fields.Add(Pole2); 
+            Methods.Fields.Add(Pole3); Methods.Fields.Add(Pole4); Methods.Fields.Add(Pole5); 
+            Methods.Fields.Add(Pole6); Methods.Fields.Add(Pole7); Methods.Fields.Add(Pole8);
         }
 
+        AI bot;
         int turn = 0;
         string mark;
-        int move = 0;
-        List<Button> Fields = new List<Button>();
+        bool isAi=false;
+        
 
         private void Pole0_Click(object sender, EventArgs e)
         {
@@ -68,7 +69,10 @@ namespace Lab6_Kolko_Krzyzyk
             ChangeTurn();
             Field.Text = mark;
             Field.Enabled = false;
-            CheckWin();
+            Methods.Fields[Methods.Fields.IndexOf(Field)].Text = mark;
+            Methods.Fields[Methods.Fields.IndexOf(Field)].Enabled = false;
+            Methods.CheckWin(Methods.Fields);
+            TurnAI();
         }
 
         private void ChangeTurn()
@@ -83,53 +87,24 @@ namespace Lab6_Kolko_Krzyzyk
                 mark = "X";
                 turn--;
             }
-            move++;
+            Methods.IncrementMove();
         }
 
-        private void CheckWin()
+        private void TurnAI()
         {
-            if (  Pole0.Text == "O" && Pole1.Text == "O" && Pole2.Text == "O"
-               || Pole3.Text == "O" && Pole4.Text == "O" && Pole5.Text == "O"
-               || Pole6.Text == "O" && Pole8.Text == "O" && Pole7.Text == "O"
-               || Pole0.Text == "O" && Pole3.Text == "O" && Pole6.Text == "O"
-               || Pole1.Text == "O" && Pole4.Text == "O" && Pole7.Text == "O"
-               || Pole2.Text == "O" && Pole5.Text == "O" && Pole8.Text == "O"
-               || Pole0.Text == "O" && Pole4.Text == "O" && Pole8.Text == "O"
-               || Pole2.Text == "O" && Pole4.Text == "O" && Pole6.Text == "O")
+            if(isAi == true)
             {
-                foreach (var button in Fields)
-                {
-                    button.Enabled = false;
-                }
-                MessageBox.Show("Circle wins!", "Info",MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (Pole0.Text == "X" && Pole1.Text == "X" && Pole2.Text == "X"
-                || Pole3.Text == "X" && Pole4.Text == "X" && Pole5.Text == "X"
-                || Pole6.Text == "X" && Pole8.Text == "X" && Pole7.Text == "X"
-                || Pole0.Text == "X" && Pole3.Text == "X" && Pole6.Text == "X"
-                || Pole1.Text == "X" && Pole4.Text == "X" && Pole7.Text == "X"
-                || Pole2.Text == "X" && Pole5.Text == "X" && Pole8.Text == "X"
-                || Pole0.Text == "X" && Pole4.Text == "X" && Pole8.Text == "X"
-                || Pole2.Text == "X" && Pole4.Text == "X" && Pole6.Text == "X")
-            {
-                foreach (var button in Fields)
-                {
-                    button.Enabled = false;
-                }
-                MessageBox.Show("X wins!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (move == 9)
-            {
-                MessageBox.Show("Draw", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bot.MakeMove();
+                turn--;
             }
         }
 
         private void restart()
         {
-            move = 0;
+            Methods.SetMove(0);
             turn = 0;
             mark = "";
-            foreach (var button in Fields)
+            foreach (var button in Methods.Fields)
             {
                 button.Enabled = true;
                 button.Text = mark;
@@ -150,20 +125,18 @@ namespace Lab6_Kolko_Krzyzyk
             restart();
         }
 
-        private void BotCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void btnAI_Click(object sender, EventArgs e)
         {
-            if(UserCheckBox.Checked == true)
-            {
-                UserCheckBox.Checked = false;
-            }
+            restart();
+            bot = new AI("X", "0");
+            isAi = true;
         }
 
-        private void UserCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void btnPlayer_Click(object sender, EventArgs e)
         {
-            if (BotCheckBox.Checked == true)
-            {
-                BotCheckBox.Checked = false;
-            }
+            restart();
+            isAi = false;
+            bot = null;
         }
     }
 }

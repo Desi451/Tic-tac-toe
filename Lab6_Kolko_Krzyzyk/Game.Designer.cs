@@ -42,8 +42,8 @@
             this.RematchBtn = new System.Windows.Forms.Button();
             this.SettingsBtn = new System.Windows.Forms.Button();
             this.settingsPanel = new System.Windows.Forms.Panel();
-            this.UserCheckBox = new System.Windows.Forms.CheckBox();
-            this.BotCheckBox = new System.Windows.Forms.CheckBox();
+            this.btnPlayer = new System.Windows.Forms.Button();
+            this.btnAI = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.settingsPanel.SuspendLayout();
             this.SuspendLayout();
@@ -217,36 +217,47 @@
             // 
             // settingsPanel
             // 
-            this.settingsPanel.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.settingsPanel.Controls.Add(this.UserCheckBox);
-            this.settingsPanel.Controls.Add(this.BotCheckBox);
+            this.settingsPanel.BackColor = System.Drawing.Color.BlueViolet;
+            this.settingsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.settingsPanel.Controls.Add(this.btnPlayer);
+            this.settingsPanel.Controls.Add(this.btnAI);
             this.settingsPanel.Controls.Add(this.checkBox1);
             this.settingsPanel.Location = new System.Drawing.Point(12, 452);
             this.settingsPanel.Name = "settingsPanel";
             this.settingsPanel.Size = new System.Drawing.Size(460, 74);
             this.settingsPanel.TabIndex = 14;
             // 
-            // UserCheckBox
+            // btnPlayer
             // 
-            this.UserCheckBox.AutoSize = true;
-            this.UserCheckBox.Location = new System.Drawing.Point(15, 40);
-            this.UserCheckBox.Name = "UserCheckBox";
-            this.UserCheckBox.Size = new System.Drawing.Size(80, 17);
-            this.UserCheckBox.TabIndex = 2;
-            this.UserCheckBox.Text = "checkBox3";
-            this.UserCheckBox.UseVisualStyleBackColor = true;
-            this.UserCheckBox.CheckedChanged += new System.EventHandler(this.UserCheckBox_CheckedChanged);
+            this.btnPlayer.BackColor = System.Drawing.Color.BlueViolet;
+            this.btnPlayer.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnPlayer.FlatAppearance.BorderSize = 2;
+            this.btnPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlayer.Font = new System.Drawing.Font("Snap ITC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlayer.Location = new System.Drawing.Point(247, 21);
+            this.btnPlayer.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPlayer.Name = "btnPlayer";
+            this.btnPlayer.Size = new System.Drawing.Size(146, 39);
+            this.btnPlayer.TabIndex = 14;
+            this.btnPlayer.Text = "vs Player";
+            this.btnPlayer.UseVisualStyleBackColor = false;
+            this.btnPlayer.Click += new System.EventHandler(this.btnPlayer_Click);
             // 
-            // BotCheckBox
+            // btnAI
             // 
-            this.BotCheckBox.AutoSize = true;
-            this.BotCheckBox.Location = new System.Drawing.Point(15, 17);
-            this.BotCheckBox.Name = "BotCheckBox";
-            this.BotCheckBox.Size = new System.Drawing.Size(80, 17);
-            this.BotCheckBox.TabIndex = 1;
-            this.BotCheckBox.Text = "checkBox2";
-            this.BotCheckBox.UseVisualStyleBackColor = true;
-            this.BotCheckBox.CheckedChanged += new System.EventHandler(this.BotCheckBox_CheckedChanged);
+            this.btnAI.BackColor = System.Drawing.Color.BlueViolet;
+            this.btnAI.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAI.FlatAppearance.BorderSize = 2;
+            this.btnAI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAI.Font = new System.Drawing.Font("Snap ITC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAI.Location = new System.Drawing.Point(49, 21);
+            this.btnAI.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAI.Name = "btnAI";
+            this.btnAI.Size = new System.Drawing.Size(146, 39);
+            this.btnAI.TabIndex = 13;
+            this.btnAI.Text = "vs AI";
+            this.btnAI.UseVisualStyleBackColor = false;
+            this.btnAI.Click += new System.EventHandler(this.btnAI_Click);
             // 
             // checkBox1
             // 
@@ -305,8 +316,8 @@
         private System.Windows.Forms.Button SettingsBtn;
         private System.Windows.Forms.Panel settingsPanel;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox UserCheckBox;
-        private System.Windows.Forms.CheckBox BotCheckBox;
+        private System.Windows.Forms.Button btnPlayer;
+        private System.Windows.Forms.Button btnAI;
     }
 }
 
